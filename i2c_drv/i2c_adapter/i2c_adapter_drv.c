@@ -83,9 +83,6 @@ const struct i2c_algorithm i2c_bus_virtual_algo = {
 
 static int i2c_bus_virtual_probe(struct platform_device *pdev)
 {
-	/* get info from device tree, to set i2c_adapter/hardware  */
-	
-	/* alloc, set, register i2c_adapter */
 	g_adapter = kzalloc(sizeof(*g_adapter), GFP_KERNEL);
 
 	g_adapter->owner = THIS_MODULE;
@@ -138,7 +135,7 @@ static void __exit i2c_bus_virtual_exit(void)
 }
 module_exit(i2c_bus_virtual_exit);
 
-MODULE_AUTHOR("www.100ask.net");
+MODULE_AUTHOR("YQ");
 MODULE_LICENSE("GPL");
 
 
